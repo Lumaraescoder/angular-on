@@ -1,0 +1,43 @@
+<nav class="navbar">
+  <mat-toolbar class="desk">
+    <img src="/assets/logo.png" />
+    <!-- desk -->
+    <div class="desk-bar" fxShow="true" fxHide.lt-md="true">
+      <ul class="desk-bar__links">
+        <li href="/" mat-button> <i class="far fa-user"></i> <a class="nav-link"> Contracts</a><i
+            class="fas fa-chevron-down"></i></li>
+        <li class="nav-item" href="#" mat-button><i class="far fa-file-alt"></i><a class="nav-link">Documents</a><i
+            class="fas fa-chevron-down"></i></li>
+        <li class="nav-item" href="#" mat-button><i class="far fa-credit-card"></i><a class="nav-link">Payout</a><i
+            class="fas fa-chevron-down"></i></li>
+        <li class="nav-item" href="#" mat-button><i class="far fa-calendar"></i><a class="nav-link">Time</a><i
+            class="fas fa-chevron-down"></i></li>
+      </ul>
+    </div>
+
+    <hr size="45"/>
+    <img class="user-image" src="/assets/user.png" />
+
+    <div class="hamburger"fxShow="true" fxHide.gt-sm="true">
+      <ul (click)="sidenav.toggle()" class="hamburger__menu">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </mat-toolbar>
+
+  <!-- <mobile -->  
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav fxLayout="column">
+      <div class="menu" fxLayout="column">
+        <ul class="menu__links">
+          <li href="#" mat-button>Contracts</li>
+          <li href="#" mat-button>Documents</li>
+          <li href="#" mat-button>Payout</li>
+          <li href="#" mat-button>Time</li>
+        </ul>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</nav>
